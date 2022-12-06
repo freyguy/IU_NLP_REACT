@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>REACT | RealTime Email Analysis & Correlation Tooling</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"  >
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        .uploadDiv {
+        border-top: 2px solid rgb(96, 96, 96);
+        border-bottom: 2px solid rgb(96, 96, 96);
+        margin-top: 25px ;
+    }
+    </style>
+</head>
+<header>
+	<div class="navbar-header">
+    </div>
+    <h1 style="text-align: center;">REACT | RealTime Email Analysis & Correlation Tooling</h1>
+</header>
+<body>
+    <div class="uploadDiv" align="center">
+        <p>Prediction: <b>{{ prediction }}</b></p>
+
+        <p>Similar emails:</p>
+        {%for i in range(0, len)%}
+        <p>{{similarity[i]}}</p>
+        {%endfor%}
+    </div>
+
+</body>
+</html>
+
